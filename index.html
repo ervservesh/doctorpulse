@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Doctor Pulse</title>    
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/media.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet"> 
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/validate.js"></script>
+    <!-- Font Awesome 6 -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <script>
+		jQuery(function() {
+			jQuery("#firstname").validate({
+				expression: "if (VAL) return true; else return false;",
+				message: "Please enter the Required field"
+			});
+			jQuery("#lastname").validate({
+				expression: "if (VAL) return true; else return false;",
+				message: "Please enter the Required field"
+			});
+			jQuery("#email").validate({
+				expression: "if (VAL.match(/^[^\\W][a-zA-Z0-9\\_\\-\\.]+([a-zA-Z0-9\\_\\-\\.]+)*\\@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)*\\.[a-zA-Z]{2,4}$/)) return true; else return false;",
+				message: "Should be a valid Email id"
+			});
+			jQuery("#mobile").validate({
+				expression: "if (VAL.match(/^[0-9-+]+$/)) return true; else return false;",
+				message: "Should be a valid Mobile Number"
+			});
+			
+			jQuery("#message").validate({
+				expression: "if (VAL) return true; else return false;",
+				message: "Please enter the Required field"
+			});
+		});
+	</script>
+    <!-- AOS -->
+    <link rel="stylesheet" href="css/aos.css">
+    <script src="js/aos.js"></script>
+</head>
+<body>
+<div class="mainWrapper">
+    <div class="mainInner">
+    <header>
+        <div class="headInn">
+            <div class="logoSec">
+                <a href="#"><img src="images/logo.png" alt=""></a>
+            </div>
+        </div>
+    </header>
+    <section class="contentSec1">
+       <div class="contSecLeft" data-aos="fade-up">
+       	<h1>Quick, Easy and Smarter <br /><span>way of tracking  patients records.</span></h1>
+        <p>Doctor Pulse is a one-stop application that allows doctors to search patients, their profiles and record digital observations with minimal technical skills.</p>
+        <div id="btnSec" class="btnSec">
+        	<button>BOOK A DEMO</button>
+        </div>
+       </div>
+       <div class="contSecRight" data-aos="fade-down">
+       	<img src="images/image_1.svg" alt="Dashboard" class="desk_image1"/> 
+        <img src="images/mob_image1.svg" alt="Dashboard" class="mob_image1"/>      	</div>
+      <div class="clear"></div>
+    </section>
+    <section class="contentSec2">
+       <div class="contSecLeft2">
+       <div class="leftCont2" data-aos="fade-right">
+       	<h2>Search For Patient</h2>
+        <p>Our interface permits doctors to immediately locate patient and its information just with the help of patients’ particular details such as ICD code, etc.</p>
+        </div>
+       </div>
+       <div class="contSecRight2" data-aos="fade-left">
+       	<img src="images/search_for_patient.svg" alt="Dashboard" class="desk_image2"/>  
+        <img src="images/mob_image2.svg" alt="Dashboard" class="mob_image2"/>       </div>
+      <div class="clear"></div>
+    </section>
+    <section class="contentSec3">
+       <div class="contSecLeft3" data-aos="fade-up-right">
+       	<img src="images/patient_profile.svg" alt="Dashboard" class="desk_image3"/>
+        <img src="images/mob_image3.svg" alt="Dashboard" class="mob_image3"/>
+       </div>
+       <div class="contSecRight3">
+           <div class="rightCont3" data-aos="fade-up-left">
+            <h2>Patient Profile</h2>
+            <p>This is a kindle like device that records patients' medical data. It simply replaces physical recording with a digital recording system. 
+                We let doctors create a one-page visual summary and easily review digitally consolidated medical reports and their observations.
+                 </p>
+           </div>
+       </div>
+       <div class="clear"></div>
+    </section>
+    <section class="contentSec4">
+       <div class="contSecLeft4">
+           <div class="leftCont4" data-aos="fade-down-right">
+                <h2>Create Observations</h2>
+             <p>Medics can easily and quickly record to maintain the patients’ medical data like X-Rays, MRIs, CT Scans, Ultrasounds with applied protocols and observations at one place.</p>
+            </div>
+       </div>
+        <div class="contSecRight4">
+        	<img src="images/observations.svg" alt="Dashboard" class="desk_image4"/>
+            <img src="images/mob_image4.svg" alt="Dashboard" class="mob_image4"/>        </div>
+      <div class="clear"></div>
+    </section>
+    <section class="contentSec5">
+    	<h3>Contact Us</h3>
+       	<p>For secured, smoother, smarter, simplified patients recording system and quicker access to patients’ data</p>
+<div class="contactForm">
+		<form name="contact-us" action="https://formspree.io/mnqgrnal" method="POST">
+        	<div class="contCol">
+            	<input type="text" placeholder="First Name" class="txtField" name="firstname" id="firstname">
+                <span>*Required Field</span>
+            </div>
+            <div class="contCol">
+            	<input type="text" placeholder="Last Name" class="txtField" name="lastname" id="lastname">
+                <span>*Required Field</span>
+            </div>
+            <div class="contCol">
+            	<input type="text" placeholder="Mobile Number" class="txtField" name="mobile" id="mobile" maxlength="10">
+                <span>*Required Field</span>
+            </div>
+            <div class="contCol">
+            	<input type="text" placeholder="john@doe.com" class="txtField" name="email" id="email">
+                <span>*Required Field</span>
+            </div>
+            <div class="contCol w100">
+            	<textarea class="txtArea" id="message" placeholder="Write your message here…."></textarea>
+                <span>*Required Field</span>
+            </div>
+            <div class="contCol w100">
+                <div class="btnSec">
+                    <button type="submit">send a message</button>
+                </div>
+            </div>
+            </form>
+        </div>
+    </section>
+    </div>
+    <!-- <footer class="footerSec">
+    	<div class="footerInn">
+        	<div class="ftLeft">
+            	<a href="#">Privacy Policy |</a> <a href="#">Terms &amp; Conditions |  </a> <span>Copyright &copy; Doctor Pulse</span>
+            </div>
+            <div class="ftRight">
+            	<a href="#"><i class="fab fa-facebook-f"></i></a> <a href="#"><i class="fab fa-twitter"></i></a> <a href="#"><i class="fab fa-instagram"></i></a> <a href="#"><i class="fab fa-skype"></i></a>
+            </div>
+            <div class="clear"></div>
+        	
+        </div>
+    </footer> -->
+</div>
+<script>
+      AOS.init();  
+	  
+	  $("#btnSec").click(function () {
+			$("html, body").animate({ scrollTop: $('.contentSec5').offset().top - 90 }, 2000, function () {
+			});
+		});
+		
+		  
+</script>
+</body>
